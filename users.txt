@@ -1,0 +1,14 @@
+Jordi-frontend-director-2000-600
+Ana-frontend-programmer-6000
+Jaume-frontend-analist-1000
+Eli-frontend-programmer-2500-600
+Victor-frontend-programmer-1500-1000
+Elena-frontend-programmer-4000-500
+Javier-backend-programmer-5000-500
+Sonia-backend-programmer-1500-1000
+Jose-backend-programmer-3500
+Rocio-backend-director-6000-400
+Alfonso-backend-analist-4500
+Monica-backend-analist-3500-1000
+Carlos-backend-programmer-1000
+Victoria-backend-programmer-1500-1000

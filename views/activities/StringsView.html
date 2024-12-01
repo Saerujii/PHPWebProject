@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Aprenentatge per Projectes</title>
+        <meta charset="UTF-8">
+        <meta name="title" content="Portal del Modul 3">
+        <link href="../../css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header  class="title">
+            <h2> Aprenentatge per Projectes </h2>
+            <section id="menu">
+                <nav  class="darkstyle">
+                    <div>
+                        <a href="../main.php" class="optmenu"> HOME </a>
+                        <a href="NumbersView.html" class="optmenu"> NUMBERS & ARRAYS </a>
+                        <a href="ArrayAssocView.html" class="optmenu"> ARRAYS_ASSOC </a>
+                    </div>	
+                </nav>
+            </section>
+        </header>
+
+        <aside id="leftside">
+            <div class="darkstyle">
+                <nav>
+                    <br><br><br><br><br><br>
+                </nav>
+            </div>
+        </aside>
+
+        <aside id="rightside">
+            <div class="darkstyle">
+                <h4>Referencies utils:</h4>
+                <br>
+                <a href="https://www.php.net/manual/es/" class="optmenu"><i>PHP.NET</i></a>  
+                <br><br>
+                <a href="https://www.w3schools.com/php/default.asp" class="optmenu"><i>W3CSCHOOLS</i></a> 
+            </div>
+        </aside>
+
+        <section id="central">
+            <a name="principal"></a>
+            <h4>TREBALL AMB STRINGS</h4>
+
+            <article>
+                <b>CONTAR LES VOCALS DE LA FRASE</b>
+                <div id="formulario">             
+                    <form action="../../controllers/activities/FirstStringController.php" method="POST">
+                        <label>Text a processar: </label><br><br>
+                        <input name="texto"/>
+                        <input type="submit" value="COMPROVAR" id="enviar"/>
+                    </form>
+                </div>
+            </article>
+
+            <article>
+                <b>XIFRAT ESTATIC DE LES VOCALS DE LA FRASE</b>
+                <div id="formulario">             
+                    <form action="../../controllers/activities/SecondStringController.php" method="POST">
+                        <label>Text a processar: </label><br><br>
+                        <input name="texto"/>
+                        <input type="submit" value="XIFRAR" id="enviar"/>
+                    </form>
+                </div>
+            </article>	
+
+            <article>
+                <b>Distància entre caràcters</b>
+                <div id="formulario">
+                    <form action="../../controllers/activities/distanceChars.php" method="post">
+                        <label>Cadena de caràcters:</label>
+                        <input type="text" name="string"><br><br>
+                        <label>Primer caràcter:</label>
+                        <input type="text" name="char1" maxlength="1" class="inputChar"><br>
+                        <label>Segon caràcter:</label>
+                        <input type="text" name="char2" maxlength="1" class="inputChar"><br><br>
+                        
+                        <input type="submit" value="Calcular" id="enviar"><br><br>
+                    </form>
+                </div>
+            </article>
+            
+            <article>
+                <b>Eliminar separadors d'una cadena de caràcters</b>
+                <div id="formulario">
+                    <form action="../../controllers/activities/cleancad.php" method="post">
+                        <label>Cadena de caràcters:</label>
+                        <input type="text" name="string">
+                        
+                        <input type="submit" value="Nejetar" id="enviar">
+                    </form>
+                </div>
+            </article>
+            
+            <article>
+                <b>Encripta una cadena de caràcters</b>
+                <div id="formulario">
+                    <form action="../../controllers/activities/Encrypt.php" method="post">
+                        <label>Cadena de caràcters:</label>
+                        <input type="text" name="text">
+                        
+                        <input type="submit" value="Encriptar" id="enviar">
+                    </form>
+                </div>
+            </article>
+            
+            <article>
+                <b>Decripta una cadena de caràcters</b>
+                <div id="formulario">
+                    <form action="../../controllers/activities/Decrypt.php" method="post">
+                        <label>Cadena de caràcters encriptada:</label>
+                        <input type="text" name="text">
+                        
+                        <input type="submit" value="Nejetar" id="enviar">
+                    </form>
+                </div>
+            </article>
+            
+            <article id="replace">
+                <b>Substitueix dins d'un fitxer</b>
+                <div id="formulario">
+                    <form action="../../controllers/activities/FileReplaceController.php" method="post">
+                        <label>Path del fitxer*</label>
+                        <input type="text" name="filePath"/>
+                        <label>Cadena per substituir*</label>
+                        <input type="text" name="find"/>
+                        <label>Substituir per*</label>
+                        <input type="text" name="replaceWith"/>
+                        <label>Substituir vegades:</label>
+                        <input type="number" name="replaceAmount" placeholder="All"/><br>
+                        
+                        <input type="submit" value="Substituir" id="enviar"><br><br>
+                    </form>
+                </div>
+            </article>
+            
+            <article id="cipher">
+                <b>Xifra/Desxifra un arxiu</b>
+                <div id="formulario">
+                    <form action="../../controllers/activities/FileCipherController.php" method="post">
+                        <label>Mode d'operacio:</label>
+                        <select name="mode">
+                            <option value="cipher" selected>Xifrar</option>
+                            <option value="uncipher">Desxifrar</option>
+                        </select><br><br>
+                        <label>Path del fitxer*</label>
+                        <input type="text" name="filePath">
+                        <label>Keys*</label>
+                        <input type="text" name="keys" placeholder='1, 2, 3, 4, 5,...'><br>
+                        
+                        <input type="submit" value="Procesar" id="enviar"><br><br>
+                    </form>
+                </div>
+            </article>
+        </section>
+
+        <footer>
+            <div class="darkstyle">  
+                <a><b> Autor: Jose Meseguer</b> </a> 
+            </div>		
+        </footer>
+    </body>
+</html>

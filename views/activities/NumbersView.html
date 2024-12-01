@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Aprenentatge per Projectes</title>
+        <meta charset="UTF-8">
+        <meta name="title" content="Portal del Modul 3">
+        <link href="../../css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body>
+        <header  class="title">
+            <h2> Aprenentatge per Projectes </h2>
+            <section id="menu">
+                <nav  class="darkstyle">
+                    <div>
+                        <a href="../main.php" class="optmenu"> HOME </a>
+                        <a href="StringsView.html" class="optmenu"> STRINGS</a>
+                        <a href="ArrayAssocView.html" class="optmenu"> ARRAYS_ASSOC </a>
+                    </div>	
+                </nav>
+            </section>
+        </header>
+
+        <aside id="leftside">
+            <div class="darkstyle">
+                <nav>
+                    <br><br><br><br><br><br>				
+                </nav>
+            </div>
+        </aside>
+
+       <aside id="rightside">
+            <div class="darkstyle">
+                <h4>Referencies utils:</h4>
+                <br>
+                <a href="https://www.php.net/manual/es/" class="optmenu"><i>PHP.NET</i></a>  
+                <br><br>
+                <a href="https://www.w3schools.com/php/default.asp" class="optmenu"><i>W3CSCHOOLS</i></a> 
+            </div>
+        </aside>
+
+        <section id="central">
+            <a name="principal"></a>
+            <h4>CALCULS NUMERICS BASICS</h4>
+
+            <article>
+                <a name="calculbasic"></a>
+                <b>ESCULL LA OPERACIO A REALITZAR AMB 2 NUMEROS</b>
+
+                <div id="formulario">             
+                    <form action="../../controllers/activities/BasicOperController.php" method="POST">
+                        <label>Valors Numerics: </label><br><br>
+                        <input type="number" name="valor1" placeholder="introdueix un valor numeric"/><br><br>
+                        <input type="number" name="valor2" placeholder="introdueix un valor numeric"/><br><br>
+
+                        <input list ="operations" placeholder="Selecciona operació" name ="oper" />
+                        <datalist id="operations">
+                            <option label = "+" value ="suma"></option>
+                            <option label = "-" value ="resta"></option>
+                            <option label = "*" value ="multiplicacion"></option>
+                            <option label = "/" value ="division"></option>
+                        </datalist>
+
+                        <input type="submit" value="EXECUTAR" id="enviar"/><br>
+                    </form>
+                </div>
+            </article>
+
+            <article>
+                <a name="prime"></a>
+                <b>AVERIGUA SI EL VALOR INTRODUIT ES UN VALOR PRIMER</b>
+                <!--COMO YA SABEIS GET ENVIARIA LOS PARAMETROS DE FORMA VISIBLE POR LA URL Y POST NO-->
+                <div id="formulario">             
+                    <form action="../../controllers/activities/PrimeController.php" method="POST">
+                        <label>Valor Numeric a comprovar: </label><br><br>
+                        <input type="number" name="num"/><br><br>
+                        Mostrar la llista de divisors                       
+                        <input type="radio" name="viewdivisors"/><br>
+                        <input type="submit" value="COMPROVAR" id="enviar"/><br><br>
+                    </form>
+                </div>
+            </article>	
+            
+            <article>
+                <a name="perfect"></a>
+                <b>AVERIGUA SI EL VALOR INTRODUIT ES UN VALOR PERFECTE</b>
+                <div id="formulario">             
+                    <form action="../../controllers/activities/PerfectController.php" method="POST">
+                        <label>Valor Numeric a comprovar: </label><br><br>
+                        <input type="number" name="num"/><br><br>
+                        Mostrar la llista de divisors                       
+                        <input type="radio" name="viewdivisors"/><br>
+                        <input type="submit" value="COMPROVAR" id="enviar"/><br><br>
+                    </form>
+                </div>
+            </article>	
+            
+            <article>
+                <a name="mcd"></a>
+                <b>CALCULA EL MINIM COMU DIVISOR DE DOS VALORS</b>
+                <div id="formulario">             
+                    <form action="../../controllers/activities/mcdController.php" method="POST">
+                        <label>Primer valor:</label><br><br>
+                        <input type="number" name="num1"/><br><br>
+                        <label>Segon valor:</label><br><br>
+                        <input type="number" name="num2"/><br><br>
+                        <input type="submit" value="COMPROVAR" id="enviar"/><br><br>
+                    </form>
+                </div>
+            </article>
+            
+            <article>
+                <a name="mcm"></a>
+                <b>CALCULA EL MINIM COMU MULTIPLE DE DOS VALORS</b>
+                <div id="formulario">             
+                    <form action="../../controllers/activities/mcmController.php" method="POST">
+                        <label>Primer valor:</label><br><br>
+                        <input type="number" name="num1"/><br><br>
+                        <label>Segon valor:</label><br><br>
+                        <input type="number" name="num2"/><br><br>
+                        <input type="submit" value="COMPROVAR" id="enviar"/><br><br>
+                    </form>
+                </div>
+            </article>
+            
+            <article>
+                <a name="fibonacci"></a>
+                <b>MOSTRAR REQUERIDA LONGITUD DE VALORS DE LA SECUENCIA FIBONACCI</b>
+                <div id="formulario">             
+                    <form action="../../controllers/activities/fiboController.php" method="POST">
+                        <label>Longitud de la sequencia: </label><br><br>
+                        <input type="number" name="num"/><br><br>
+                        <input type="submit" value="COMPROVAR" id="enviar"/><br><br>
+                    </form>
+                </div>
+            </article>
+            
+            <article>
+                <a name="act2"></a>
+                <b>ACTIVITAT 2: Disseny modular amb vectors numèrics</b>
+                <div id="formulario">             
+                    <form action="../../controllers/activities/ArrayController.php" method="POST">
+                        <label for="fillAmount">Quantitat de valors per generar: </label>
+                        <input id="fillAmount" type="number" name="fillAmount"/><br>
+                        
+                        <label for="fillFrom">Valor minim: </label>
+                        <input id="fillFrom" type="number" name="fillFrom"/><br>
+                        
+                        <label for="fillFrom">Valor maxim: </label>
+                        <input id="fillTo"  type="number" name="fillTo"/><br>
+                        
+                        <label for="linSearch">Valor a buscar dins de l'array (Recerca lineal per predeterminat): </label>
+                        <input id="linSearch" type="number" name="linSearch"><br><br>
+                        
+                        <label for="binSearch">Utilitzar recerca binaria en lloc de lineal: </label>
+                        <input id="binSearch" type="radio" name="binSearch"><br><br><br>
+                        
+                        <label for="arrayStats">Mostrar valors min, max i mig del array: </label>
+                        <input id="arrayStats" type="radio" name="arrayStats"><br><br><br>
+                        
+                        <label>Ordenar l'array: </label><br><br>
+                        <label for="arraySortAsc">Ascendente: </label>
+                        <input id="arraySortAsc" type="radio" name="arraySort" value="2"><br><br>
+                        <label for="arraySortDesc">Descendente: </label>
+                        <input id="arraySortDesc" type="radio" name="arraySort" value="0">
+                        
+                        <input type="submit" value="COMPROVAR" id="enviar"/><br><br>
+                    </form>
+                </div>
+            </article>
+            
+            <article>
+                <a name="CONTROL1UF2"></a>
+                <b>CONTROL 1 UF2</b>
+                <div id="formulario">             
+                    <form action="../../controllers/activities/Control2_1Controller.php" method="POST">
+                        <label>Dades per generar l'Array:</label><br><br>
+                        <input type='number' name='fillFrom' placeholder='Introdueix el valor mínim'><br>
+                        <input type='number' name='fillTo' placeholder='Introdueix el valor màxim'><br>
+                        <input type='number' name='fillSize' placeholder='Inrodueix la mida del Array'><br>
+                        
+                        <label>Valors per obtenir múltiples comuns:</label><br><br><br>
+                        <input type='number' name='multsFrom'><br>
+                        <input type='number' name='multsTo'><br>
+                        
+                        <label>Valors de filtre per l'Array:</label><br><br>
+                        <input type='number' name='selectFrom' placeholder="Primer valor límit"><br>
+                        <input type='number' name='selectTo' placeholder="Segon valor límit"><br>
+                        <label>Ordena els valors filtrats:</label>
+                        <input type='radio' name='sort'><br>
+                        
+                        <input type="submit" value="SHOW" id="enviar"/><br><br>
+                    </form>
+                </div>
+            </article>
+            
+            <article>
+                <a name="searchPrime"></a>
+                <b>Buscar nombres Primers entre dos valors</b>
+                <div id='formulario'>
+                    <form action="../../controllers/activities/PrimeController.php" method="POST">
+                        <label>Inserir valor inicial:</label>
+                        <input type='number' name='num1'><br>
+                        <label>Inserir valor final:</label>
+                        <input type='number' name='num2'><br>
+                        <input type='submit' value='BUSCAR' id='enviar'><br><br>
+                    </form>
+                </div>
+            </article>
+            
+        </section>
+
+        <footer>
+            <div class="darkstyle">  
+                <a><b> Autor: Jose Meseguer</b> </a> 
+            </div>		
+        </footer>
+    </body>
+</html>

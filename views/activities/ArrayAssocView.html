@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Aprenentatge per Projectes</title>
+        <meta charset="UTF-8">
+        <meta name="title" content="Portal del Modul 3">
+        <link href="../../css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header  class="title">
+            <h2> Aprenentatge per Projectes </h2>
+            <section id="menu">
+                <nav  class="darkstyle">
+                    <div>
+                        <a href="../main.php" class="optmenu"> HOME </a>
+                        <a href="NumbersView.html" class="optmenu"> NUMBERS & ARRAYS </a>
+                        <a href="StringsView.html" class="optmenu"> STRINGS</a>
+                    </div>	
+                </nav>
+            </section>
+        </header>
+
+        <aside id="leftside">
+            <div class="darkstyle">
+                <nav>
+                    <br><br><br><br><br><br>
+                </nav>
+            </div>
+        </aside>
+
+        <aside id="rightside">
+            <div class="darkstyle">
+                <h4>Referencies utils:</h4>
+                <br>
+                <a href="https://www.php.net/manual/es/" class="optmenu"><i>PHP.NET</i></a>  
+                <br><br>
+                <a href="https://www.w3schools.com/php/default.asp" class="optmenu"><i>W3CSCHOOLS</i></a> 
+            </div>
+        </aside>
+
+        <section id="central">
+            <a name="principal"></a>
+            <h4>DADES COMPLEXES. OPERACIONS AMB ARRAYS</h4>
+
+            <article>
+                <p><b>DADES DE PAISSOS EUROPEUS</b></p>
+                <div id="formulario">             
+                    <form action="../../controllers/activities/ArraysAssocController.php" method="POST">
+                        <label>Nom del pais: </label><br><br>
+                        <input type="text" name="pais" placeholder="introdueix el nom del pais"/> <br><br>
+                        Mostrar la llista de paissos ordenats per:  <br><br>                     
+                        <input list ="orderby" placeholder="Escull camp d'ordenacio" name ="key" />
+                        <datalist id="orderby">
+                            <option label = "pais" value ="pais"></option>
+                            <option label = "capital" value ="capital"></option>
+                            <option label = "poblacio" value ="poblacio"></option>
+                        </datalist>
+                        <input type="submit" value="ENVIAR" id="enviar"/><br>
+                    </form>
+                </div>
+            </article>
+
+            <article>
+                <p><b>FILTRAR INFORMACIÓ</b></p>
+                <div id="formulario">
+                    <form action="../../controllers/activities/filterInfo.php" method="POST">
+                        <label>Filtrar per nom:</label>
+                        <input type="text" name="player"><br><br>
+                        <label>Filtrar per posicio:</label>
+                        <input type="text" name="position"><br><br>
+                        <label>Filtrar per titols obtinguts:</label>
+                        <input type="number" name="champion"><br><br>
+                        <label>Filtrar per puntuacio minima:</label>
+                        <input type="number" name="points"><br><br>
+                        <input type="submit" value="Filtrar" id="enviar"><br>
+                    </form><br>
+                </div>
+            </article>	
+            
+            <article>
+                <p><b>CONTROL2 UF2: Selecció de dades</b></p>
+                <div id="formulario">
+                    <form action="../../controllers/controls/UF2_2_controller.php" method="POST">
+                        <label>Department</label>
+                        <input type="text" name="department"><br><br>
+                        <label>Inclou text:</label>
+                        <input type="checkbox" name="departmentType"><br><br>
+                        <label>Role:</label>
+                        <input type="text" name="role"><br><br>
+                        <label>Inclou text:</label>
+                        <input type="checkbox" name="roleType"><br><br>
+                        <label>Connected:</label>
+                        <input type="number" name="connected"><br><br>
+                        <label>Rang de valors:</label>
+                        <select name="connectedType">
+                            <option value="less" selected>LessOrEquals</option>
+                            <option value="more">MoreOrEquals</option>
+                        </select><br><br>
+                        <label>Inactive:</label>
+                        <input type="number" name="inactive"><br><br>
+                        <label>Rang de valors:</label>
+                        <select name="inactiveType">
+                            <option value="less" selected>LessOrEquals</option>
+                            <option value="more">MoreOrEquals</option>
+                        </select><br><br>
+                        <input type="submit" value="ENVIAR" id="enviar"><br>
+                    </form><br>
+                </div>
+            </article>	
+            
+            <article id="control3">
+                <p><b>CONTROL UF3: FITXERS</b></p>
+                <div id="formulario">
+                    <form action="../../controllers/controls/UF3Controller.php" method="POST">
+                        <label>Source Path</label>
+                        <input type="text" name="sourcePath"><br><br>
+                        <label>Department</label>
+                        <input type="text" name="filterDept"><br><br>
+                        <label>Dest Path</label>
+                        <input type="text" name="destPath"><br><br>
+                        <label>Role</label>
+                        <input type="text" name="filterRole" placeholder="role"><br><br>
+                        <label>Non Equals</label>
+                        <input type="checkbox" name="notMatching"><br><br>
+                        <input type="submit" value="ENVIAR" id="enviar"><br>
+                    </form><br>
+                </div>
+            </article>	
+        </section>
+
+        <footer>
+            <div class="darkstyle">  
+                <a><b> Autor: Jose Meseguer</b> </a> 
+            </div>		
+        </footer>
+    </body>
+</html>
